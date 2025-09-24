@@ -1,31 +1,40 @@
-i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Display Page</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
 
+        /* Header */
         header {
-            background-color: #4CAF50;
-            color: white;
             width: 100%;
-            padding: 1rem 0;
+            background-color: #1e88e5;
+            color: white;
+            padding: 1.5rem 0;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        /* Main content */
         main {
             flex: 1;
             display: flex;
@@ -33,20 +42,28 @@ i<!DOCTYPE html>
             align-items: center;
             justify-content: center;
             padding: 2rem;
+        }
+
+        .image-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            max-width: 700px;
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
         }
 
         img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 12px;
             margin-bottom: 1rem;
-            transition: transform 0.3s;
-        }
-
-        img:hover {
-            transform: scale(1.05);
         }
 
         p {
@@ -55,32 +72,36 @@ i<!DOCTYPE html>
             color: #555;
         }
 
+        /* Footer */
         footer {
-            background-color: #f1f1f1;
             width: 100%;
             padding: 1rem 0;
             text-align: center;
             font-size: 0.9rem;
             color: #666;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+            background-color: #e1e8f0;
+            box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to My Image Gallery</h1>
+        <h1>My Beautiful Image</h1>
     </header>
 
     <main>
-        <img src="ENTER YOUR IMAGE URL" alt="A descriptive alt text for your image">
-        <p>This image is loaded directly from the provided URL. Hover over the image for a subtle zoom effect.</p>
+        <div class="image-card">
+            <img src="ENTER YOUR IMAGE URL" alt="A descriptive alt text for your image">
+            <p>This image is displayed elegantly inside a card. Hover over the card for a subtle lift effect.</p>
+        </div>
     </main>
 
     <footer>
-        &copy; 2025 My Awesome Image Page
+        &copy; 2025 My Image Showcase
     </footer>
 
 </body>
 </html>
+
 
